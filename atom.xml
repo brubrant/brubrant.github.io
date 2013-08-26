@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Web Expert]]></subtitle>
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   <link href="http://yoursite.com"/>
-  <updated>2013-08-26T01:34:34.524Z</updated>
+  <updated>2013-08-26T01:52:40.645Z</updated>
   <id>http://yoursite.com/</id>
   <author>
     <name><![CDATA[Bruno Brant]]></name>
@@ -16,8 +16,9 @@
     <link href="http://yoursite.com/2013/08/25/hello-world/"/>
     <id>http://yoursite.com/2013/08/25/hello-world/</id>
     <published>2013-08-26T00:51:23.000Z</published>
-    <updated>2013-08-26T01:22:15.000Z</updated>
-    <content type="html"><![CDATA[<p>Welcome to <a href="http://zespia.tw/hexo">Hexo</a>! This is your very first post. Check <a href="http://zespia.tw/hexo/docs">documentation</a> to learn how to use ;);;</p>
+    <updated>2013-08-26T01:48:59.000Z</updated>
+    <content type="html"><![CDATA[<p>Finalmente meu Blog está no ar. Após muito tempo idealizando e não fazendo nada, agora ele foi pro ar!</p>
 ]]></content>
+    <category scheme="http://yoursite.com/tags/etc/" term="etc"/>
   </entry>
 </feed>
