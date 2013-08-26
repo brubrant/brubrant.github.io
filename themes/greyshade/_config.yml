@@ -1,0 +1,26 @@
+menu:
+  Home: /
+  Archives: archives
+
+excerpt_link: Leia Mais →
+
+mathjax: false
+fancybox: true
+
+social:
+  twitter: true
+  github: true
+  rss: true
+
+twitter:
+  username: brubrant
+
+github:
+  username: brubrant
+
+addit:
+  facebook: false
+  twitter: true
+  gplus: true
+  pinit: false
+  publid: ra-5206464767bea141
