@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Bruno Brant]]></title>
+  <subtitle><![CDATA[Web Expert]]></subtitle>
+  <link href="http://yoursite.com/atom.xml" rel="self"/>
+  <link href="http://yoursite.com"/>
+  <updated>2013-08-26T01:34:34.524Z</updated>
+  <id>http://yoursite.com/</id>
+  <author>
+    <name><![CDATA[Bruno Brant]]></name>
+    <email><![CDATA[brubrant@gmail.com]]></email>
+  </author>
+  <generator uri="http://zespia.tw/hexo">Hexo</generator>
+  <entry>
+    <title type="html"><![CDATA[Hello World]]></title>
+    <link href="http://yoursite.com/2013/08/25/hello-world/"/>
+    <id>http://yoursite.com/2013/08/25/hello-world/</id>
+    <published>2013-08-26T00:51:23.000Z</published>
+    <updated>2013-08-26T01:22:15.000Z</updated>
+    <content type="html"><![CDATA[<p>Welcome to <a href="http://zespia.tw/hexo">Hexo</a>! This is your very first post. Check <a href="http://zespia.tw/hexo/docs">documentation</a> to learn how to use ;);;</p>
+]]></content>
+  </entry>
+</feed>
