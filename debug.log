@@ -1,4 +1,4 @@
-date: 2013-08-26 11:34:57.388
+date: 2013-08-26 12:20:52.682
 argv: node /usr/bin/hexo generate
 os: Linux 3.5.0-17-generic linux x64
 version:
@@ -13,42 +13,474 @@ version:
   openssl: 1.0.1e
 ---
 
-[debug] 11:34:56.825 Configuration file load successfully
-[debug] 11:34:56.834 Version info checked successfully
-[debug] 11:34:56.834 Loading the database...
-[debug] 11:34:57.029 Theme layout loaded
-[debug] 11:34:57.065 Theme source loaded
-[debug] 11:34:57.071 Theme configuration loaded
-[debug] 11:34:57.081 Theme i18n loaded
-[debug] 11:34:57.121 Processed: _posts/hello-world.md
-[debug] 11:34:57.148 Cache saved
-[info] 11:34:57.149 Files loaded in 0.139s
-[debug] 11:34:57.163 Public folder not exists. No need to clear public folder.
-[debug] 11:34:57.179 Render archive: archives/
-[debug] 11:34:57.180 Render archive: archives/2013/
-[debug] 11:34:57.180 Render archive: archives/2013/08/
-[debug] 11:34:57.180 Render index: 
-[debug] 11:34:57.180 Render post: 2013/08/26/hello-world/
-[error] 11:34:57.387 HexoError: Render failed: css/style.css
-ParseError: /home/brubrant/Documents/dev/brubrant.github.io/themes/light/source/css/_base/variable.styl:14
-   10| font-serif = "Georgia", serif
-   11| font-mono = Monaco, Menlo, Consolas, Courier New, monospace
-   12| font-title = "Lato", Helvetica Neue, Helvetica, Arial, sans-serif
-   13| 
- > 14| @import url( //fonts.googleapis.com/css?family=Lato:400,400italic )
-   15| 
-   16| font-icon = FontAwesome
-   17| font-icon-path = 'font/fontawesome-webfont'
+[debug] 12:20:52.272 Configuration file load successfully
+[debug] 12:20:52.274 Version info checked successfully
+[debug] 12:20:52.275 Loading the database...
+[debug] 12:20:52.468 Theme layout loaded
+[debug] 12:20:52.490 Processed: CNAME
+[debug] 12:20:52.501 Theme configuration loaded
+[debug] 12:20:52.578 Theme source loaded
+[debug] 12:20:52.581 Theme i18n loaded
+[debug] 12:20:52.622 Processed: _posts/hello-world.md
+[debug] 12:20:52.639 Cache saved
+[info] 12:20:52.640 Files loaded in 0.193s
+[debug] 12:20:52.652 Public folder not exists. No need to clear public folder.
+[debug] 12:20:52.655 Render archive: archives/
+[debug] 12:20:52.655 Render archive: archives/2013/
+[debug] 12:20:52.655 Render archive: archives/2013/08/
+[debug] 12:20:52.655 Render index: 
+[debug] 12:20:52.655 Render post: 2013/08/26/hello-world/
+[debug] 12:20:52.655 Render tag: tags/etc/
+[error] 12:20:52.669 HexoError: Render failed: archives/index.html
+TypeError: /home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/archive.ejs:1
+ >> 1| <%- partial('_partial/archive', {pagination: config.archive}) %>
 
-expected ")", got "space"
+/home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/_partial/archive.ejs:24
+    22|           <%- partial('post/date', {item: item, type: "archive"}) %>
+    23|           <br>
+ >> 24|           <%- partial('post/tag', {item: item, type: "archive"}) %>
+    25|           <% if(config.disqus_short_name && item.comments) { %>
+    26|             <span class="comments">
+    27|               <a href="<%- config.root %><%- item.path %>#disqus_thread">Comments</a>
 
-    at Parser.error (/usr/lib/node_modules/hexo/node_modules/stylus/lib/parser.js:166:11)
-    at Parser.expect (/usr/lib/node_modules/hexo/node_modules/stylus/lib/parser.js:194:12)
-    at Parser.url (/usr/lib/node_modules/hexo/node_modules/stylus/lib/parser.js:1227:10)
-    at Parser.functionCall (/usr/lib/node_modules/hexo/node_modules/stylus/lib/parser.js:1237:52)
-    at Parser.primary (/usr/lib/node_modules/hexo/node_modules/stylus/lib/parser.js:1611:21)
-    at Parser.subscript (/usr/lib/node_modules/hexo/node_modules/stylus/lib/parser.js:1561:21)
-    at Parser.unary (/usr/lib/node_modules/hexo/node_modules/stylus/lib/parser.js:1552:17)
-    at Parser.defined (/usr/lib/node_modules/hexo/node_modules/stylus/lib/parser.js:1526:21)
-    at Parser.multiplicative (/usr/lib/node_modules/hexo/node_modules/stylus/lib/parser.js:1500:21)
-    at Parser.additive (/usr/lib/node_modules/hexo/node_modules/stylus/lib/parser.js:1485:21)
+/home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/_partial/post/tag.ejs:9
+    7|    } %>
+    8| <% if(item.tags && item.tags.length) { %>
+ >> 9|  <%
+    10|   var tags = [];
+    11|   item.tags.forEach(function(tag){
+    12|     tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
+
+Cannot read property 'path' of null
+    at buf.push.__stack.lineno (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:38:46)
+    at Query.forEach.Query.each (/usr/lib/node_modules/hexo/node_modules/warehouse/lib/query.js:71:5)
+    at eval (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:37:13)
+    at eval (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:40:199)
+    at /usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:249:15
+    at Object.exports.render (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:287:13)
+    at Object.module.exports [as ejs] (/usr/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
+    at Object.exports.renderSync (/usr/lib/node_modules/hexo/lib/render.js:143:29)
+    at render (/usr/lib/node_modules/hexo/lib/plugins/helper/partial.js:28:22)
+    at Object.module.exports [as partial] (/usr/lib/node_modules/hexo/lib/plugins/helper/partial.js:41:12)
+
+[error] 12:20:52.673 HexoError: Render failed: archives/2013/index.html
+TypeError: /home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/archive.ejs:1
+ >> 1| <%- partial('_partial/archive', {pagination: config.archive}) %>
+
+/home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/_partial/archive.ejs:24
+    22|           <%- partial('post/date', {item: item, type: "archive"}) %>
+    23|           <br>
+ >> 24|           <%- partial('post/tag', {item: item, type: "archive"}) %>
+    25|           <% if(config.disqus_short_name && item.comments) { %>
+    26|             <span class="comments">
+    27|               <a href="<%- config.root %><%- item.path %>#disqus_thread">Comments</a>
+
+/home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/_partial/post/tag.ejs:9
+    7|    } %>
+    8| <% if(item.tags && item.tags.length) { %>
+ >> 9|  <%
+    10|   var tags = [];
+    11|   item.tags.forEach(function(tag){
+    12|     tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
+
+Cannot read property 'path' of null
+    at buf.push.__stack.lineno (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:38:46)
+    at Query.forEach.Query.each (/usr/lib/node_modules/hexo/node_modules/warehouse/lib/query.js:71:5)
+    at eval (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:37:13)
+    at eval (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:40:199)
+    at /usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:249:15
+    at Object.exports.render (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:287:13)
+    at Object.module.exports [as ejs] (/usr/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
+    at Object.exports.renderSync (/usr/lib/node_modules/hexo/lib/render.js:143:29)
+    at render (/usr/lib/node_modules/hexo/lib/plugins/helper/partial.js:28:22)
+    at Object.module.exports [as partial] (/usr/lib/node_modules/hexo/lib/plugins/helper/partial.js:41:12)
+
+[error] 12:20:52.676 HexoError: Render failed: archives/2013/08/index.html
+TypeError: /home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/archive.ejs:1
+ >> 1| <%- partial('_partial/archive', {pagination: config.archive}) %>
+
+/home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/_partial/archive.ejs:24
+    22|           <%- partial('post/date', {item: item, type: "archive"}) %>
+    23|           <br>
+ >> 24|           <%- partial('post/tag', {item: item, type: "archive"}) %>
+    25|           <% if(config.disqus_short_name && item.comments) { %>
+    26|             <span class="comments">
+    27|               <a href="<%- config.root %><%- item.path %>#disqus_thread">Comments</a>
+
+/home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/_partial/post/tag.ejs:9
+    7|    } %>
+    8| <% if(item.tags && item.tags.length) { %>
+ >> 9|  <%
+    10|   var tags = [];
+    11|   item.tags.forEach(function(tag){
+    12|     tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
+
+Cannot read property 'path' of null
+    at buf.push.__stack.lineno (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:38:46)
+    at Query.forEach.Query.each (/usr/lib/node_modules/hexo/node_modules/warehouse/lib/query.js:71:5)
+    at eval (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:37:13)
+    at eval (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:40:199)
+    at /usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:249:15
+    at Object.exports.render (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:287:13)
+    at Object.module.exports [as ejs] (/usr/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
+    at Object.exports.renderSync (/usr/lib/node_modules/hexo/lib/render.js:143:29)
+    at render (/usr/lib/node_modules/hexo/lib/plugins/helper/partial.js:28:22)
+    at Object.module.exports [as partial] (/usr/lib/node_modules/hexo/lib/plugins/helper/partial.js:41:12)
+
+[error] 12:20:52.682 HexoError: Render failed: index.html
+TypeError: /home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/index.ejs:3
+    1| <div itemscope itemtype="http://schema.org/Blog">
+    2| <% page.posts.each(function(item){ %>
+ >> 3|   <%- partial('_partial/post', {item: item, index: true}) %>
+    4| <% }); %>
+    5| </div>
+    6| 
+
+/home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/_partial/post.ejs:2
+    1| <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+ >> 2|   <%- partial('article', {item: item, index: index})%>
+    3| </article>
+    4| <% if(!index) { %>
+    5|   <%- partial('post/sharing') %>
+
+/home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/_partial/article.ejs:5
+    3| 	<div class="meta">
+    4|           <%- partial('post/date', {type: "index"}) %>
+ >> 5|           <%- partial('post/tag', {type: "index"}) %>
+    6|           <% if(item.comment & config.disqus_shortname) { %>
+    7|           <span class="comments">
+    8|             <a href="<%- item.permalink %>#disqus_thread">Comments</a>
+
+/home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/_partial/post/tag.ejs:9
+    7|    } %>
+    8| <% if(item.tags && item.tags.length) { %>
+ >> 9|  <%
+    10|   var tags = [];
+    11|   item.tags.forEach(function(tag){
+    12|     tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
+
+Cannot read property 'path' of null
+    at buf.push.__stack.lineno (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:38:46)
+    at Query.forEach.Query.each (/usr/lib/node_modules/hexo/node_modules/warehouse/lib/query.js:71:5)
+    at eval (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:37:13)
+    at eval (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:40:199)
+    at /usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:249:15
+    at Object.exports.render (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:287:13)
+    at Object.module.exports [as ejs] (/usr/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
+    at Object.exports.renderSync (/usr/lib/node_modules/hexo/lib/render.js:143:29)
+    at render (/usr/lib/node_modules/hexo/lib/plugins/helper/partial.js:28:22)
+    at Object.module.exports [as partial] (/usr/lib/node_modules/hexo/lib/plugins/helper/partial.js:41:12)
+[debug] 12:20:52.272 Configuration file load successfully
+[debug] 12:20:52.274 Version info checked successfully
+[debug] 12:20:52.275 Loading the database...
+[debug] 12:20:52.468 Theme layout loaded
+[debug] 12:20:52.490 Processed: CNAME
+[debug] 12:20:52.501 Theme configuration loaded
+[debug] 12:20:52.578 Theme source loaded
+[debug] 12:20:52.581 Theme i18n loaded
+[debug] 12:20:52.622 Processed: _posts/hello-world.md
+[debug] 12:20:52.639 Cache saved
+[info] 12:20:52.640 Files loaded in 0.193s
+[debug] 12:20:52.652 Public folder not exists. No need to clear public folder.
+[debug] 12:20:52.655 Render archive: archives/
+[debug] 12:20:52.655 Render archive: archives/2013/
+[debug] 12:20:52.655 Render archive: archives/2013/08/
+[debug] 12:20:52.655 Render index: 
+[debug] 12:20:52.655 Render post: 2013/08/26/hello-world/
+[debug] 12:20:52.655 Render tag: tags/etc/
+[error] 12:20:52.669 HexoError: Render failed: archives/index.html
+TypeError: /home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/archive.ejs:1
+ >> 1| <%- partial('_partial/archive', {pagination: config.archive}) %>
+
+/home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/_partial/archive.ejs:24
+    22|           <%- partial('post/date', {item: item, type: "archive"}) %>
+    23|           <br>
+ >> 24|           <%- partial('post/tag', {item: item, type: "archive"}) %>
+    25|           <% if(config.disqus_short_name && item.comments) { %>
+    26|             <span class="comments">
+    27|               <a href="<%- config.root %><%- item.path %>#disqus_thread">Comments</a>
+
+/home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/_partial/post/tag.ejs:9
+    7|    } %>
+    8| <% if(item.tags && item.tags.length) { %>
+ >> 9|  <%
+    10|   var tags = [];
+    11|   item.tags.forEach(function(tag){
+    12|     tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
+
+Cannot read property 'path' of null
+    at buf.push.__stack.lineno (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:38:46)
+    at Query.forEach.Query.each (/usr/lib/node_modules/hexo/node_modules/warehouse/lib/query.js:71:5)
+    at eval (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:37:13)
+    at eval (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:40:199)
+    at /usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:249:15
+    at Object.exports.render (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:287:13)
+    at Object.module.exports [as ejs] (/usr/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
+    at Object.exports.renderSync (/usr/lib/node_modules/hexo/lib/render.js:143:29)
+    at render (/usr/lib/node_modules/hexo/lib/plugins/helper/partial.js:28:22)
+    at Object.module.exports [as partial] (/usr/lib/node_modules/hexo/lib/plugins/helper/partial.js:41:12)
+
+[error] 12:20:52.673 HexoError: Render failed: archives/2013/index.html
+TypeError: /home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/archive.ejs:1
+ >> 1| <%- partial('_partial/archive', {pagination: config.archive}) %>
+
+/home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/_partial/archive.ejs:24
+    22|           <%- partial('post/date', {item: item, type: "archive"}) %>
+    23|           <br>
+ >> 24|           <%- partial('post/tag', {item: item, type: "archive"}) %>
+    25|           <% if(config.disqus_short_name && item.comments) { %>
+    26|             <span class="comments">
+    27|               <a href="<%- config.root %><%- item.path %>#disqus_thread">Comments</a>
+
+/home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/_partial/post/tag.ejs:9
+    7|    } %>
+    8| <% if(item.tags && item.tags.length) { %>
+ >> 9|  <%
+    10|   var tags = [];
+    11|   item.tags.forEach(function(tag){
+    12|     tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
+
+Cannot read property 'path' of null
+    at buf.push.__stack.lineno (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:38:46)
+    at Query.forEach.Query.each (/usr/lib/node_modules/hexo/node_modules/warehouse/lib/query.js:71:5)
+    at eval (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:37:13)
+    at eval (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:40:199)
+    at /usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:249:15
+    at Object.exports.render (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:287:13)
+    at Object.module.exports [as ejs] (/usr/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
+    at Object.exports.renderSync (/usr/lib/node_modules/hexo/lib/render.js:143:29)
+    at render (/usr/lib/node_modules/hexo/lib/plugins/helper/partial.js:28:22)
+    at Object.module.exports [as partial] (/usr/lib/node_modules/hexo/lib/plugins/helper/partial.js:41:12)
+
+[error] 12:20:52.676 HexoError: Render failed: archives/2013/08/index.html
+TypeError: /home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/archive.ejs:1
+ >> 1| <%- partial('_partial/archive', {pagination: config.archive}) %>
+
+/home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/_partial/archive.ejs:24
+    22|           <%- partial('post/date', {item: item, type: "archive"}) %>
+    23|           <br>
+ >> 24|           <%- partial('post/tag', {item: item, type: "archive"}) %>
+    25|           <% if(config.disqus_short_name && item.comments) { %>
+    26|             <span class="comments">
+    27|               <a href="<%- config.root %><%- item.path %>#disqus_thread">Comments</a>
+
+/home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/_partial/post/tag.ejs:9
+    7|    } %>
+    8| <% if(item.tags && item.tags.length) { %>
+ >> 9|  <%
+    10|   var tags = [];
+    11|   item.tags.forEach(function(tag){
+    12|     tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
+
+Cannot read property 'path' of null
+    at buf.push.__stack.lineno (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:38:46)
+    at Query.forEach.Query.each (/usr/lib/node_modules/hexo/node_modules/warehouse/lib/query.js:71:5)
+    at eval (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:37:13)
+    at eval (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:40:199)
+    at /usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:249:15
+    at Object.exports.render (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:287:13)
+    at Object.module.exports [as ejs] (/usr/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
+    at Object.exports.renderSync (/usr/lib/node_modules/hexo/lib/render.js:143:29)
+    at render (/usr/lib/node_modules/hexo/lib/plugins/helper/partial.js:28:22)
+    at Object.module.exports [as partial] (/usr/lib/node_modules/hexo/lib/plugins/helper/partial.js:41:12)
+
+[error] 12:20:52.682 HexoError: Render failed: index.html
+TypeError: /home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/index.ejs:3
+    1| <div itemscope itemtype="http://schema.org/Blog">
+    2| <% page.posts.each(function(item){ %>
+ >> 3|   <%- partial('_partial/post', {item: item, index: true}) %>
+    4| <% }); %>
+    5| </div>
+    6| 
+
+/home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/_partial/post.ejs:2
+    1| <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+ >> 2|   <%- partial('article', {item: item, index: index})%>
+    3| </article>
+    4| <% if(!index) { %>
+    5|   <%- partial('post/sharing') %>
+
+/home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/_partial/article.ejs:5
+    3| 	<div class="meta">
+    4|           <%- partial('post/date', {type: "index"}) %>
+ >> 5|           <%- partial('post/tag', {type: "index"}) %>
+    6|           <% if(item.comment & config.disqus_shortname) { %>
+    7|           <span class="comments">
+    8|             <a href="<%- item.permalink %>#disqus_thread">Comments</a>
+
+/home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/_partial/post/tag.ejs:9
+    7|    } %>
+    8| <% if(item.tags && item.tags.length) { %>
+ >> 9|  <%
+    10|   var tags = [];
+    11|   item.tags.forEach(function(tag){
+    12|     tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
+
+Cannot read property 'path' of null
+    at buf.push.__stack.lineno (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:38:46)
+    at Query.forEach.Query.each (/usr/lib/node_modules/hexo/node_modules/warehouse/lib/query.js:71:5)
+    at eval (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:37:13)
+    at eval (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:40:199)
+    at /usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:249:15
+    at Object.exports.render (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:287:13)
+    at Object.module.exports [as ejs] (/usr/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
+    at Object.exports.renderSync (/usr/lib/node_modules/hexo/lib/render.js:143:29)
+    at render (/usr/lib/node_modules/hexo/lib/plugins/helper/partial.js:28:22)
+    at Object.module.exports [as partial] (/usr/lib/node_modules/hexo/lib/plugins/helper/partial.js:41:12)
+[debug] 12:20:52.272 Configuration file load successfully
+[debug] 12:20:52.274 Version info checked successfully
+[debug] 12:20:52.275 Loading the database...
+[debug] 12:20:52.468 Theme layout loaded
+[debug] 12:20:52.490 Processed: CNAME
+[debug] 12:20:52.501 Theme configuration loaded
+[debug] 12:20:52.578 Theme source loaded
+[debug] 12:20:52.581 Theme i18n loaded
+[debug] 12:20:52.622 Processed: _posts/hello-world.md
+[debug] 12:20:52.639 Cache saved
+[info] 12:20:52.640 Files loaded in 0.193s
+[debug] 12:20:52.652 Public folder not exists. No need to clear public folder.
+[debug] 12:20:52.655 Render archive: archives/
+[debug] 12:20:52.655 Render archive: archives/2013/
+[debug] 12:20:52.655 Render archive: archives/2013/08/
+[debug] 12:20:52.655 Render index: 
+[debug] 12:20:52.655 Render post: 2013/08/26/hello-world/
+[debug] 12:20:52.655 Render tag: tags/etc/
+[error] 12:20:52.669 HexoError: Render failed: archives/index.html
+TypeError: /home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/archive.ejs:1
+ >> 1| <%- partial('_partial/archive', {pagination: config.archive}) %>
+
+/home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/_partial/archive.ejs:24
+    22|           <%- partial('post/date', {item: item, type: "archive"}) %>
+    23|           <br>
+ >> 24|           <%- partial('post/tag', {item: item, type: "archive"}) %>
+    25|           <% if(config.disqus_short_name && item.comments) { %>
+    26|             <span class="comments">
+    27|               <a href="<%- config.root %><%- item.path %>#disqus_thread">Comments</a>
+
+/home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/_partial/post/tag.ejs:9
+    7|    } %>
+    8| <% if(item.tags && item.tags.length) { %>
+ >> 9|  <%
+    10|   var tags = [];
+    11|   item.tags.forEach(function(tag){
+    12|     tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
+
+Cannot read property 'path' of null
+    at buf.push.__stack.lineno (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:38:46)
+    at Query.forEach.Query.each (/usr/lib/node_modules/hexo/node_modules/warehouse/lib/query.js:71:5)
+    at eval (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:37:13)
+    at eval (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:40:199)
+    at /usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:249:15
+    at Object.exports.render (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:287:13)
+    at Object.module.exports [as ejs] (/usr/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
+    at Object.exports.renderSync (/usr/lib/node_modules/hexo/lib/render.js:143:29)
+    at render (/usr/lib/node_modules/hexo/lib/plugins/helper/partial.js:28:22)
+    at Object.module.exports [as partial] (/usr/lib/node_modules/hexo/lib/plugins/helper/partial.js:41:12)
+
+[error] 12:20:52.673 HexoError: Render failed: archives/2013/index.html
+TypeError: /home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/archive.ejs:1
+ >> 1| <%- partial('_partial/archive', {pagination: config.archive}) %>
+
+/home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/_partial/archive.ejs:24
+    22|           <%- partial('post/date', {item: item, type: "archive"}) %>
+    23|           <br>
+ >> 24|           <%- partial('post/tag', {item: item, type: "archive"}) %>
+    25|           <% if(config.disqus_short_name && item.comments) { %>
+    26|             <span class="comments">
+    27|               <a href="<%- config.root %><%- item.path %>#disqus_thread">Comments</a>
+
+/home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/_partial/post/tag.ejs:9
+    7|    } %>
+    8| <% if(item.tags && item.tags.length) { %>
+ >> 9|  <%
+    10|   var tags = [];
+    11|   item.tags.forEach(function(tag){
+    12|     tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
+
+Cannot read property 'path' of null
+    at buf.push.__stack.lineno (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:38:46)
+    at Query.forEach.Query.each (/usr/lib/node_modules/hexo/node_modules/warehouse/lib/query.js:71:5)
+    at eval (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:37:13)
+    at eval (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:40:199)
+    at /usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:249:15
+    at Object.exports.render (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:287:13)
+    at Object.module.exports [as ejs] (/usr/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
+    at Object.exports.renderSync (/usr/lib/node_modules/hexo/lib/render.js:143:29)
+    at render (/usr/lib/node_modules/hexo/lib/plugins/helper/partial.js:28:22)
+    at Object.module.exports [as partial] (/usr/lib/node_modules/hexo/lib/plugins/helper/partial.js:41:12)
+
+[error] 12:20:52.676 HexoError: Render failed: archives/2013/08/index.html
+TypeError: /home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/archive.ejs:1
+ >> 1| <%- partial('_partial/archive', {pagination: config.archive}) %>
+
+/home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/_partial/archive.ejs:24
+    22|           <%- partial('post/date', {item: item, type: "archive"}) %>
+    23|           <br>
+ >> 24|           <%- partial('post/tag', {item: item, type: "archive"}) %>
+    25|           <% if(config.disqus_short_name && item.comments) { %>
+    26|             <span class="comments">
+    27|               <a href="<%- config.root %><%- item.path %>#disqus_thread">Comments</a>
+
+/home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/_partial/post/tag.ejs:9
+    7|    } %>
+    8| <% if(item.tags && item.tags.length) { %>
+ >> 9|  <%
+    10|   var tags = [];
+    11|   item.tags.forEach(function(tag){
+    12|     tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
+
+Cannot read property 'path' of null
+    at buf.push.__stack.lineno (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:38:46)
+    at Query.forEach.Query.each (/usr/lib/node_modules/hexo/node_modules/warehouse/lib/query.js:71:5)
+    at eval (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:37:13)
+    at eval (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:40:199)
+    at /usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:249:15
+    at Object.exports.render (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:287:13)
+    at Object.module.exports [as ejs] (/usr/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
+    at Object.exports.renderSync (/usr/lib/node_modules/hexo/lib/render.js:143:29)
+    at render (/usr/lib/node_modules/hexo/lib/plugins/helper/partial.js:28:22)
+    at Object.module.exports [as partial] (/usr/lib/node_modules/hexo/lib/plugins/helper/partial.js:41:12)
+
+[error] 12:20:52.682 HexoError: Render failed: index.html
+TypeError: /home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/index.ejs:3
+    1| <div itemscope itemtype="http://schema.org/Blog">
+    2| <% page.posts.each(function(item){ %>
+ >> 3|   <%- partial('_partial/post', {item: item, index: true}) %>
+    4| <% }); %>
+    5| </div>
+    6| 
+
+/home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/_partial/post.ejs:2
+    1| <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+ >> 2|   <%- partial('article', {item: item, index: index})%>
+    3| </article>
+    4| <% if(!index) { %>
+    5|   <%- partial('post/sharing') %>
+
+/home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/_partial/article.ejs:5
+    3| 	<div class="meta">
+    4|           <%- partial('post/date', {type: "index"}) %>
+ >> 5|           <%- partial('post/tag', {type: "index"}) %>
+    6|           <% if(item.comment & config.disqus_shortname) { %>
+    7|           <span class="comments">
+    8|             <a href="<%- item.permalink %>#disqus_thread">Comments</a>
+
+/home/brubrant/Documents/dev/brubrant.github.io/themes/greyshade/layout/_partial/post/tag.ejs:9
+    7|    } %>
+    8| <% if(item.tags && item.tags.length) { %>
+ >> 9|  <%
+    10|   var tags = [];
+    11|   item.tags.forEach(function(tag){
+    12|     tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
+
+Cannot read property 'path' of null
+    at buf.push.__stack.lineno (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:38:46)
+    at Query.forEach.Query.each (/usr/lib/node_modules/hexo/node_modules/warehouse/lib/query.js:71:5)
+    at eval (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:37:13)
+    at eval (eval at <anonymous> (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:40:199)
+    at /usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:249:15
+    at Object.exports.render (/usr/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:287:13)
+    at Object.module.exports [as ejs] (/usr/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
+    at Object.exports.renderSync (/usr/lib/node_modules/hexo/lib/render.js:143:29)
+    at render (/usr/lib/node_modules/hexo/lib/plugins/helper/partial.js:28:22)
+    at Object.module.exports [as partial] (/usr/lib/node_modules/hexo/lib/plugins/helper/partial.js:41:12)
