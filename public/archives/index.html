@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives | Bruno Brant</title>
+  <title>Posts passados | Bruno Brant</title>
   <meta name="author" content="Bruno Brant">
   
   <meta name="description" content="Desenvolvimento e consulutoria em projetos web">
@@ -19,100 +19,122 @@
   
 
   <link href="/favicon.png" rel="icon">
+
   <link rel="alternate" href="/atom.xml" title="Bruno Brant" type="application/atom+xml">
+
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  
   
 </head>
 
 
 <body>
-  <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">Bruno Brant</a></h1>
-  <h2><a href="/">Web Expert</a></h2>
-</div>
-<nav id="main-nav" class="alignright">
-  <ul>
+    <div class="container">
+      <div class="left-col">
+        <div class="intrude-less">
+          <header id="header" class="inner">
+            <div class="profilepic">
+  <script src="/js/md5.js"></script>
+  <script type="text/javascript">
+    $(function(){
+	$('.profilepic').append(
+          "<img src='http://www.gravatar.com/avatar/"
+          + MD5("brubrant@gmail.com")
+          + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+    });
+  </script>
+</div><!-- profilepic -->
+<h1><a href="/">Bruno Brant</a></h1>
+<p class="subtitle">Web Expert</p>
+<nav id="main-nav">
+  
+  <section class="aboutme">
+    <p>
+      Desenvolvimento e consulutoria em projetos web
+    </p>
+  
+  </section>
+</nav><!-- main-nav -->
+<nav id="sub-nav">
+  <div class="social">
     
-      <li><a href="/">Home</a></li>
+      <a class="twitter" href="http://twitter.com/brubrant"
+         title="Twitter">Twitter</a>
     
-      <li><a href="/archives">Archives</a></li>
     
-  </ul>
-  <div class="clearfix"></div>
-</nav>
-<div class="clearfix"></div></header>
-  <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title">Archives</h2>
-
-
-  
-    <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-08-26T14:21:23.000Z"><a href="/2013/08/26/hello-world/">26 Ago 2013</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2013/08/26/hello-world/">Hello World</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>Welcome to <a href="http://zespia.tw/hexo" target="_blank">Hexo</a>! This is your very first post. Check <a href="http://zespia.tw/hexo/docs" target="_blank">documentation</a> to learn how to use.</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
+      <a class="github" href="http://github.com/brubrant"
+         title="Github">Github</a>
+    
+    
+        <a class="rss" href="/atom.xml" title="RSS">RSS</a>
+    
   </div>
-</article>
+</nav><!-- sub-nav -->
 
 
-  
+          <header>
+        </div><!-- intrude-less -->
+      </div><!-- left-col -->
+      <div class="mid-col">
+        <div class="mid-col-container">
+	    <div id="content" class="inner">
 
-  <nav id="pagination">
+
+<div itemscope itemtype="http://schema.org/Blog">
   
+    
+    
+    <section class="archives"><h1 class="year">2013</h1>
+    
+    
+      <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="meta">
+          
+<span class="date">
+
+<time datetime="2013-08-26T14:21:23.000Z"
+      
+      data-updated="true"
+       itemprop="datePublished">
+  Ago 26
+</time>
+
+
+
+
+
+
+</span>
+
+          <br>
+          
+
+
+          
+        </div>
+        <h1 class="title" itemprop="name">
+          <a href="/2013/08/26/hello-world/">Hello World</a>
+        </h1>
+    </article>
+    
   
-  <div class="clearfix"></div>
-</nav>
-</div></div>
-    <aside id="sidebar" class="alignright">
-  <div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
-    <input type="hidden" name="q" value="site:yoursite.com">
-  </form>
 </div>
-
-  
-
-  
-
-  
-
-</aside>
-    <div class="clearfix"></div>
-  </div>
-  <footer id="footer" class="inner"><div class="alignleft">
-  
-  &copy; 2013 Bruno Brant
-  
 </div>
-<div class="clearfix"></div></footer>
-  <script src="/js/jquery.imagesloaded.min.js"></script>
+	</div>
+        <footer id="footer" class="inner">
+          Copyright © 2013 - Bruno Brant - Powered by <a href="https://github.com/tommy351/hexo">Hexo</a>
+        </footer>
+        
+<script src="/js/slash.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
 <script src="/js/gallery.js"></script>
+
+
+
 
 
 
@@ -125,5 +147,10 @@
 })(jQuery);
 </script>
 
+
+
+
+      </div><!-- mid-col -->
+    </div><!-- container -->
 </body>
 </html>
