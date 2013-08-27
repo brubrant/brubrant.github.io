@@ -1,0 +1,31 @@
+<%- partial('_partial/head') %>
+
+<body>
+  <header id="header" class="inner">
+  	<!-- <%- partial('_partial/header') %> -->
+  </header>
+  <div id="content" class="inner row">
+    <div id="main-col" class="col-sm-8 col-sm-push-4 col-md-9 col-md-push-3">
+    	<div class="cointainer">
+    		<div class="col-sm-12">
+    			<%- body %>
+    		</div>
+    	</div>
+    </div>
+    <aside id="sidebar" class="sidebar col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9">
+    	<div class="container">
+    		<%- partial('_partial/sidebar') %>
+    		<nav id="main-nav" class="alignright">
+			  <ul>
+			    <% for (var i in theme.menu){ %>
+			      <li><a href="<%- theme.menu[i] %>"><%= i %></a></li>
+			    <% } %>
+			  </ul>
+			</nav>
+    	</div>    	
+    </aside>
+  </div>
+  <footer id="footer" class="inner"><%- partial('_partial/footer') %></footer>
+  <%- partial('_partial/after_footer') %>
+</body>
+</html>
