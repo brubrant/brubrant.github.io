@@ -12,9 +12,9 @@ language: pt-BR
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://brunobrant.com
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :year/:title/
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
@@ -71,7 +71,7 @@ disqus_shortname:
 # Extensions
 ## Plugins: https://github.com/tommy351/hexo/wiki/Plugins
 ## Themes: https://github.com/tommy351/hexo/wiki/Themes
-theme: light
+theme: newshade
 exclude_generator:
 
 # Deployment
