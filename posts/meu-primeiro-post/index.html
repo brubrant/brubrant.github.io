@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="/images/cabin.png">
     <link href="/styles/main.css" rel="stylesheet">
-    <title>Bruno Brant - Web Expert</title>
+    <title>Meu primeiro post</title>
+    <meta name="description" content="Primeiro post em brubrant.com">
   </head>
   <body>
     <nav>
@@ -29,9 +30,33 @@
         <p>Tags do post: <span class="label label-default">sobre</span>
         </p>
       </div>
-      <div class="comments"><a href="/posts/meu-primeiro-post/#comments"><span class="icon-bubbles"></span>Comments</a></div>
-      <div class="pagination group">
+      <div class="social"><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+        <div data-size="medium" data-annotation="bubble" data-width="300" class="g-plusone"></div>
       </div>
+      <div id="comments">
+        <div id="disqus_thread"></div>
+      </div>
+      <script type="text/javascript">
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+        
+      </script>
+      <script type="text/javascript">
+        (function() {
+          var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+          po.src = 'https://apis.google.com/js/plusone.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+        
+      </script>
+      <script type="text/javascript">
+        var disqus_shortname = 'brubrant'; //- Change this to your Disqus account name
+        
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
     </div>
     <div class="cabin"><span class="icon-html5"></span><span class="icon-tux"></span><span class="icon-chrome"></span>
     </div>
