@@ -17,4 +17,5 @@ $(function() {
       $navBar.removeClass('nav-show');
     }
   });
+
 });
