@@ -18,4 +18,21 @@ $(function() {
     }
   });
 
+  // Inverte a ordem dos itens da página o que estou lendo
+  var reading = [];
+  $('.reading-item').each(function(index, el) {
+    var elHtml = $(el).clone().wrap('<div>').parent().html();
+    // var elHtml = $(el).html();
+    reading.push(elHtml);
+  });
+    console.log('reading:' + reading);
+
+  $('.reading-list').html('');
+
+  for (var i = reading.length - 1; i >= 0; i--) {
+    $('.reading-list').append(reading[i]);
+    // reading[i]
+  }
+  reading = undefined;
+
 });
