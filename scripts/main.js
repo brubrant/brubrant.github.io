@@ -18,6 +18,17 @@ $(function() {
     }
   });
 
+
+  //Desobfusca email
+  $(function() {
+   $('a[href^="mailto:"]').each(function() {
+    this.href = this.href.replace('(aaa)', '@').replace(/\(pontoo\)/g, '.');
+    // Remove this line if you don't want to set the email address as link text:
+    // this.innerHTML = this.href.replace('mailto:', '');
+   });
+  });
+
+
   // Inverte a ordem dos itens da página o que estou lendo
   var reading = [];
   $('.reading-item').each(function(index, el) {
