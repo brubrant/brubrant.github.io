@@ -547,6 +547,18 @@ h1 {
   text-align: center;
 }
 
+/* line 29, ../../src/styles/base/_typo.scss */
+.left {
+  float: left;
+  margin-right: 15px;
+}
+
+/* line 33, ../../src/styles/base/_typo.scss */
+.right {
+  float: right;
+  margin-left: 15px;
+}
+
 /* line 1, ../../src/styles/partials/_nav.scss */
 nav {
   position: fixed;
@@ -600,7 +612,7 @@ nav a:hover {
   }
 }
 
-/* line 40, ../../src/styles/partials/_nav.scss */
+/* line 46, ../../src/styles/partials/_nav.scss */
 .name {
   z-index: 100;
   font-weight: normal;
@@ -609,7 +621,7 @@ nav a:hover {
   padding: 0 1.5em;
 }
 @media (max-width: 992px) {
-  /* line 40, ../../src/styles/partials/_nav.scss */
+  /* line 46, ../../src/styles/partials/_nav.scss */
   .name {
     padding: 0 1em;
     margin: 5px 0;
@@ -617,7 +629,7 @@ nav a:hover {
   }
 }
 
-/* line 54, ../../src/styles/partials/_nav.scss */
+/* line 60, ../../src/styles/partials/_nav.scss */
 .menu {
   text-align: right;
   color: white;
@@ -627,30 +639,30 @@ nav a:hover {
   padding: .75em .8em;
   font-size: 1.4em;
 }
-/* line 63, ../../src/styles/partials/_nav.scss */
+/* line 69, ../../src/styles/partials/_nav.scss */
 .menu:hover {
   text-decoration: none;
 }
 @media (max-width: 992px) {
-  /* line 54, ../../src/styles/partials/_nav.scss */
+  /* line 60, ../../src/styles/partials/_nav.scss */
   .menu {
     display: block;
   }
 }
 
-/* line 72, ../../src/styles/partials/_nav.scss */
+/* line 78, ../../src/styles/partials/_nav.scss */
 .nav-links {
   background: #2f2b48;
   padding: 0 50px;
   font-size: 1.4em;
 }
-/* line 77, ../../src/styles/partials/_nav.scss */
+/* line 83, ../../src/styles/partials/_nav.scss */
 .nav-links a {
   display: block;
   padding: 0 0 .55em;
 }
 @media (max-width: 992px) {
-  /* line 77, ../../src/styles/partials/_nav.scss */
+  /* line 83, ../../src/styles/partials/_nav.scss */
   .nav-links a {
     display: block;
     padding: 0;
@@ -658,13 +670,13 @@ nav a:hover {
   }
 }
 @media (max-width: 768px) {
-  /* line 77, ../../src/styles/partials/_nav.scss */
+  /* line 83, ../../src/styles/partials/_nav.scss */
   .nav-links a {
     margin: .85em 1.2em;
   }
 }
 @media (max-width: 992px) {
-  /* line 72, ../../src/styles/partials/_nav.scss */
+  /* line 78, ../../src/styles/partials/_nav.scss */
   .nav-links {
     padding: 0;
     margin: 0;
@@ -674,7 +686,7 @@ nav a:hover {
   }
 }
 
-/* line 101, ../../src/styles/partials/_nav.scss */
+/* line 107, ../../src/styles/partials/_nav.scss */
 .social-media {
   text-align: center;
   position: absolute;
@@ -683,19 +695,19 @@ nav a:hover {
   font-size: 1.8em;
   line-height: 2em;
 }
-/* line 109, ../../src/styles/partials/_nav.scss */
+/* line 115, ../../src/styles/partials/_nav.scss */
 .social-media a {
   margin: 0 10px;
   color: #252138;
   padding: 2px;
 }
-/* line 116, ../../src/styles/partials/_nav.scss */
+/* line 122, ../../src/styles/partials/_nav.scss */
 .social-media a:hover {
   text-decoration: none;
   color: white;
 }
 @media (max-width: 992px) {
-  /* line 101, ../../src/styles/partials/_nav.scss */
+  /* line 107, ../../src/styles/partials/_nav.scss */
   .social-media {
     display: none;
   }
@@ -832,6 +844,16 @@ pre {
 /* line 1, ../../src/styles/modules/_images.scss */
 .img-circle {
   border-radius: 50%;
+}
+
+/* line 2, ../../src/styles/modules/_lists.scss */
+.content ul {
+  list-style: disc;
+  padding: 0 0 0 20px;
+}
+/* line 5, ../../src/styles/modules/_lists.scss */
+.content ul li {
+  padding: 0 0 10px 0;
 }
 
 /*Icon Set: IcoMoon - Free -- http://keyamoon.com/icomoon/*/
