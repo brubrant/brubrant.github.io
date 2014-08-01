@@ -41,7 +41,9 @@ $(function() {
   $('.reading-list').html('');
 
   for (var i = reading.length - 1; i >= 0; i--) {
-    $('.reading-list').append(reading[i]);
+    if ($(reading[i]).text().length > 2) {
+      $('.reading-list').append(reading[i]);      
+    }
     // reading[i]
   }
   reading = undefined;
