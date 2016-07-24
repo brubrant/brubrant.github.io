@@ -1,0 +1,47 @@
+$cor1: #54534F;
+$cor2: #67BE9B;
+$cor3: #FFCE8A;
+$white: #ffffff;
+
+hr {
+	border-color: $cor2;
+}
+
+.label-success {
+	background-color: $cor2;
+
+}
+
+@mixin titleFont {
+	font-family: 'Six Caps', sans-serif;
+
+}
+
+@mixin bodyFont {
+	font-family:  'Merriweather', sans-serif;
+}
+
+
+img {
+	max-width: 100%;
+}
+
+
+
+::-webkit-input-placeholder {color: pink;}
+::-moz-placeholder {color: pink;}
+:-ms-input-placeholder {color: pink;}
+:-moz-placeholder {color: pink;}
+
+
+
+/* 
+* Mixins
+*/
+
+@mixin round($radius) {
+    -moz-border-radius: $radius;    // firefox
+    -webkit-border-radius: $radius; // safari/chrome
+    border-radius: $radius;         // CSS3, works in IE9
+}
+

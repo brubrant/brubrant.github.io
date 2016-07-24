@@ -1,0 +1,194 @@
+@import "elementos";
+
+
+html {
+	font-size: 15px;
+}
+
+body {
+	background: $white;
+	color: $cor1;
+	@include bodyFont;
+	font-size: 1rem;
+}
+
+a {
+	color: darken($cor3,30%);
+
+	&:hover, &:active {
+		color: darken($cor3,20%);
+
+	}
+}
+
+p {
+	margin-bottom: 15px;	
+}
+
+
+
+
+.header {
+	padding: 0 0 60px;
+
+	.photo {
+		text-align: center;
+		margin: 30px 0 0 0;
+	}
+
+	h1 {
+		text-align: center;
+		@include titleFont;
+		font-size: 200px;
+		color: $cor2;
+		line-height: 1;
+		letter-spacing: 10px;
+		text-indent: -60px;
+		text-transform: uppercase;
+
+
+
+
+		&:before, &:after {
+			content: '';
+			font-size: 4px;
+			height: 4px;
+			background: $cor2;
+			width: 40%;
+			position: absolute;
+			top: 40%;
+		}
+
+		&:before {
+			left: 0;
+		}
+
+		&:after {
+			right: 0;
+		}
+
+		span {
+			background: $white;
+			position: relative;
+			padding: 0 4%;
+			z-index: 9;
+		}
+
+
+
+	}
+
+	h2 {
+		text-align: center;
+		font-size: 70px;
+
+	}
+
+	h3 {
+	}
+
+}
+
+
+.miolo {
+
+	.atuacao {
+
+		h3 {
+			font-size: 40px;
+		}
+
+		h4 {
+			margin-top: 25px;
+			border-bottom: 1px solid;
+			display: inline-block;
+
+		}
+
+
+		&.developer {
+
+		}
+	}
+
+	.entrar-contato {
+		text-align: center;
+
+		h3 {
+			font-size: 40px;
+		}
+		
+		p.btn-out {
+			margin: 40px 0;
+			
+			.btn {
+				padding: 5px 40px;
+
+				@include round(15px);
+				// @include titleFont;
+				font-size: 26px;
+				background: $cor2;
+				color: $white;
+				text-transform: uppercase;
+				position: relative;
+
+				&:hover {
+					top: 1px;
+				}
+
+			}
+		}
+
+	}
+}
+
+.miolo-under {
+	background: $cor2;
+	color: $white;
+	overflow: hidden;
+	height: 0;
+	padding: 0;
+
+	h3 {
+		font-size: 40px;
+		text-align: center;
+	}
+
+	p {
+		text-align: center;
+	}
+
+	form {
+		.input-group {
+			width: 100%;
+			margin-bottom: 20px;
+
+			input, textarea {
+				&.form-control {
+					@include round(5px);
+					background: transparent;
+					border: 1px solid $white;										
+					color: $white;
+				}
+
+			}
+
+			textarea {
+				min-height: 200px;
+			}
+
+		}
+		.btn {
+			float: right;
+
+		}
+	}
+}
+
+
+.footer {
+	// background: $cor3;
+	// padding: 200px 0;
+	margin: 40px 0 ;
+	display: none;
+}

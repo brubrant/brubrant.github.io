@@ -1,0 +1,132 @@
+hr {
+  border-color: #67BE9B; }
+
+.label-success {
+  background-color: #67BE9B; }
+
+img {
+  max-width: 100%; }
+
+::-webkit-input-placeholder {
+  color: pink; }
+
+::-moz-placeholder {
+  color: pink; }
+
+:-ms-input-placeholder {
+  color: pink; }
+
+:-moz-placeholder {
+  color: pink; }
+
+/* 
+* Mixins
+*/
+html {
+  font-size: 15px; }
+
+body {
+  background: #ffffff;
+  color: #54534F;
+  font-family: 'Merriweather', sans-serif;
+  font-size: 1rem; }
+
+a {
+  color: #f08b00; }
+  a:hover, a:active {
+    color: #ffa324; }
+
+p {
+  margin-bottom: 15px; }
+
+.header {
+  padding: 0 0 60px; }
+  .header .photo {
+    text-align: center;
+    margin: 30px 0 0 0; }
+  .header h1 {
+    text-align: center;
+    font-family: 'Six Caps', sans-serif;
+    font-size: 200px;
+    color: #67BE9B;
+    line-height: 1;
+    letter-spacing: 10px;
+    text-indent: -60px;
+    text-transform: uppercase; }
+    .header h1:before, .header h1:after {
+      content: '';
+      font-size: 4px;
+      height: 4px;
+      background: #67BE9B;
+      width: 40%;
+      position: absolute;
+      top: 40%; }
+    .header h1:before {
+      left: 0; }
+    .header h1:after {
+      right: 0; }
+    .header h1 span {
+      background: #ffffff;
+      position: relative;
+      padding: 0 4%;
+      z-index: 9; }
+  .header h2 {
+    text-align: center;
+    font-size: 70px; }
+
+.miolo .atuacao h3 {
+  font-size: 40px; }
+.miolo .atuacao h4 {
+  margin-top: 25px;
+  border-bottom: 1px solid;
+  display: inline-block; }
+.miolo .entrar-contato {
+  text-align: center; }
+  .miolo .entrar-contato h3 {
+    font-size: 40px; }
+  .miolo .entrar-contato p.btn-out {
+    margin: 40px 0; }
+    .miolo .entrar-contato p.btn-out .btn {
+      padding: 5px 40px;
+      -moz-border-radius: 15px;
+      -webkit-border-radius: 15px;
+      border-radius: 15px;
+      font-size: 26px;
+      background: #67BE9B;
+      color: #ffffff;
+      text-transform: uppercase;
+      position: relative; }
+      .miolo .entrar-contato p.btn-out .btn:hover {
+        top: 1px; }
+
+.miolo-under {
+  background: #67BE9B;
+  color: #ffffff;
+  overflow: hidden;
+  height: 0;
+  padding: 0; }
+  .miolo-under h3 {
+    font-size: 40px;
+    text-align: center; }
+  .miolo-under p {
+    text-align: center; }
+  .miolo-under form .input-group {
+    width: 100%;
+    margin-bottom: 20px; }
+    .miolo-under form .input-group input.form-control, .miolo-under form .input-group textarea.form-control {
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      background: transparent;
+      border: 1px solid #ffffff;
+      color: #ffffff; }
+    .miolo-under form .input-group textarea {
+      min-height: 200px; }
+  .miolo-under form .btn {
+    float: right; }
+
+.footer {
+  margin: 40px 0;
+  display: none; }
+
+/*# sourceMappingURL=main.css.map */
