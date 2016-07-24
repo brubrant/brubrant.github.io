@@ -12,6 +12,10 @@ hr {
 
 }
 
+.label-default {
+	background-color: lighten($cor1, 40%);
+}
+
 @mixin titleFont {
 	font-family: 'Six Caps', sans-serif;
 
@@ -28,10 +32,10 @@ img {
 
 
 
-::-webkit-input-placeholder {color: pink;}
-::-moz-placeholder {color: pink;}
-:-ms-input-placeholder {color: pink;}
-:-moz-placeholder {color: pink;}
+::-webkit-input-placeholder {color: $white;}
+::-moz-placeholder {color: $white;}
+:-ms-input-placeholder {color: $white;}
+:-moz-placeholder {color: $white;}
 
 
 
@@ -45,3 +49,21 @@ img {
     border-radius: $radius;         // CSS3, works in IE9
 }
 
+
+
+@mixin transition( $val : ease 0.8s ) {
+  -webkit-transition: $val;
+  -moz-transition:$val;
+  -o-transition:$val;
+  -ms-transition:$val;
+  transition:$val;
+}
+
+.rotated {
+	-webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    @include transition();
+}

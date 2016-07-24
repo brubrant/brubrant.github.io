@@ -10,6 +10,7 @@ body {
 	color: $cor1;
 	@include bodyFont;
 	font-size: 1rem;
+	line-height: 1.6;
 }
 
 a {
@@ -26,6 +27,14 @@ p {
 }
 
 
+.thanks {
+	background: $cor2;
+	color: $white;
+
+	p {
+		margin: 10px 0;
+	}
+}
 
 
 .header {
@@ -156,6 +165,14 @@ p {
 
 	p {
 		text-align: center;
+	}
+
+	.blink {
+		display: inline-block;
+		@include transition();
+		font-family: sans-serif;
+		margin-left: 10px;
+
 	}
 
 	form {

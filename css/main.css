@@ -4,24 +4,39 @@ hr {
 .label-success {
   background-color: #67BE9B; }
 
+.label-default {
+  background-color: #bab9b5; }
+
 img {
   max-width: 100%; }
 
 ::-webkit-input-placeholder {
-  color: pink; }
+  color: #ffffff; }
 
 ::-moz-placeholder {
-  color: pink; }
+  color: #ffffff; }
 
 :-ms-input-placeholder {
-  color: pink; }
+  color: #ffffff; }
 
 :-moz-placeholder {
-  color: pink; }
+  color: #ffffff; }
 
 /* 
 * Mixins
 */
+.rotated {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transition: ease 0.8s;
+  -moz-transition: ease 0.8s;
+  -o-transition: ease 0.8s;
+  -ms-transition: ease 0.8s;
+  transition: ease 0.8s; }
+
 html {
   font-size: 15px; }
 
@@ -29,7 +44,8 @@ body {
   background: #ffffff;
   color: #54534F;
   font-family: 'Merriweather', sans-serif;
-  font-size: 1rem; }
+  font-size: 1rem;
+  line-height: 1.6; }
 
 a {
   color: #f08b00; }
@@ -38,6 +54,12 @@ a {
 
 p {
   margin-bottom: 15px; }
+
+.thanks {
+  background: #67BE9B;
+  color: #ffffff; }
+  .thanks p {
+    margin: 10px 0; }
 
 .header {
   padding: 0 0 60px; }
@@ -110,6 +132,15 @@ p {
     text-align: center; }
   .miolo-under p {
     text-align: center; }
+  .miolo-under .blink {
+    display: inline-block;
+    -webkit-transition: ease 0.8s;
+    -moz-transition: ease 0.8s;
+    -o-transition: ease 0.8s;
+    -ms-transition: ease 0.8s;
+    transition: ease 0.8s;
+    font-family: sans-serif;
+    margin-left: 10px; }
   .miolo-under form .input-group {
     width: 100%;
     margin-bottom: 20px; }
