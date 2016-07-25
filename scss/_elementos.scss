@@ -31,11 +31,11 @@ img {
 }
 
 
-
-::-webkit-input-placeholder {color: $white;}
-::-moz-placeholder {color: $white;}
-:-ms-input-placeholder {color: $white;}
-:-moz-placeholder {color: $white;}
+::-webkit-input-placeholder	{ color:rgba($white,0.5) !important }
+input:-moz-placeholder { color:rgba($white,0.5) !important }
+input:-ms-placeholder { color:rgba($white,0.5) !important }
+::-ms-input-placeholder	{ color:rgba($white,0.5) !important }
+:-ms-input-placeholder	{ color:rgba($white,0.5) !important }
 
 
 

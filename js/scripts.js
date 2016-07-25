@@ -12,7 +12,8 @@
 
 		function showUnder () {
 
-			$('.miolo-under').height($(window).height());
+			$('.miolo-under').css('min-height', $(window).height());
+			$('.miolo-under').css('height', 'auto');
 			$('.miolo-under').css('padding', '40px 0');
 			$('html, body').animate({
 
