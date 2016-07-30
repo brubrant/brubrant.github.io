@@ -3,6 +3,25 @@
 	$(function () {
 		
 		'use strict';
+
+
+		function showAbove () {
+
+			$('.about-me').css('max-height', 2500);
+			// $('.about-me').css('min-height', $(window).height());
+			// $('.about-me').css('height', 'auto');
+			$('.about-me').css('padding', '40px 0');
+			$('html, body').delay('2s').animate({
+
+				scrollTop : $('.about-me').offset().top
+
+			}, 1000);
+		}
+
+		$('h1').click(function(event) {
+			showAbove();
+		});
+
 		
 		
 

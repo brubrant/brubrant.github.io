@@ -2,7 +2,7 @@
 
 
 html {
-	font-size: 15px;
+	font-size: 16px;
 }
 
 body {
@@ -23,7 +23,7 @@ a {
 }
 
 p {
-	margin-bottom: 15px;	
+	margin-bottom: 16px;	
 }
 
 
@@ -37,13 +37,70 @@ p {
 }
 
 
-.header {
-	padding: 0 0 60px;
+.about-me {
+
+	background-color: $black;	
+	color : $white;
+	overflow: hidden;
+	// height: auto;
+	padding: 0;
+	// transition: max-height 2s ease-out;
+	max-height: 0;
+	// @include transition(1s cubic-bezier(0.82, 0.02, 0.99, 0.02));
+	// @include transition(1s cubic-bezier(1,-0.09, 1, 1));
+	@include transition(1s linear);
 
 	.photo {
 		text-align: center;
-		margin: 30px 0 0 0;
+		margin: 0;
+
+		img {
+			max-width: 250px;
+			 -webkit-filter: grayscale(100%);
+		       -moz-filter: grayscale(100%);
+		         -o-filter: grayscale(100%);
+		        -ms-filter: grayscale(100%);
+		            filter: grayscale(100%);
+			transition-property: all;
+			transition-duration: 1s;
+		}
+
+		&:hover {
+			img {
+				-webkit-filter: grayscale(0%);
+			       -moz-filter: grayscale(0%);
+			         -o-filter: grayscale(0%);
+			        -ms-filter: grayscale(0%);
+			            filter: grayscale(0%);
+				transition-property: all;
+				transition-duration: 4s;
+				
+			}
+		}
 	}
+
+	h2 {
+		text-align: center;
+		@include titleFont;
+		font-size: 100px;
+		line-height: 1;
+		letter-spacing: 10px;
+		text-transform: uppercase;
+		margin-bottom: 25px;
+	}
+
+	p {
+		font-size: 17px;
+		margin-bottom: 18px;
+		line-height: 1.5;
+	}
+
+}
+
+
+.header {
+	padding: 0 0 60px;
+
 
 	h1 {
 		text-align: center;
@@ -53,6 +110,8 @@ p {
 		line-height: 1;
 		letter-spacing: 10px;
 		text-transform: uppercase;
+		overflow: hidden;
+		cursor: pointer;
 
 
 
@@ -80,6 +139,13 @@ p {
 			position: relative;
 			padding: 0 4%;
 			z-index: 9;
+			@include transition();
+
+			&:hover {
+				top: 5px;
+				@include transition();
+			}
+
 		}
 
 
